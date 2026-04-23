@@ -1,0 +1,61 @@
+body {
+  width: 0vw;
+  height: 100vh;
+  background: url('/images/Interactive-Web_Background09.jpg') center / 100% auto no-repeat;
+  display: fill;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-word {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: clamp(300px, 10vw, 130px);
+  color: #00a9ce;
+  letter-spacing: 0.30em;
+  line-height: 1;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.cover-say {
+  position: absolute;
+  left: 13%;
+  top: 30%;
+}
+
+.cover-hello {
+  position: absolute;
+  left: 33%;
+  top: 185%;
+}
+
+.btn-play {
+  position: absolute;
+  left: 75.8%;
+  top: -184.9%;
+  width: clamp(533px, 10vw, 120px);
+  height: clamp(285px, 10vw, 120px);
+  background: #d0d0d0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.12s;
+}
+
+.btn-play:hover  { background: #b8b8b8; transform: scale(1.05); }
+.btn-play:active { transform: scale(0.97); }
+
+.btn-play::after {
+  content: '';
+  display: block;
+  width: 0; height: 0;
+  border-top:    clamp(90px, 2.4vw, 28px) solid transparent;
+  border-bottom: clamp(90px, 2.4vw, 28px) solid transparent;
+  border-left:   clamp(120px, 3.6vw, 42px) solid #00a9ce;
+  margin-left: 6px;
+}

@@ -1,0 +1,99 @@
+
+:root {
+    --green:  #1d9e3e;
+    --teal:   #00a9ce;
+    --grey:   #d0d0d0;
+    --white:  #ffffff;
+}
+ 
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+
+body {
+    width: 0vw;
+    height: 100vh;
+    background: url('/images/Interactive-Web_Background10.jpg') center / 100% auto no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.instr-title {
+    position: absolute;
+    top: -1%;
+    left: 12%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(100px, 10vw, 141px);
+    color: var(--green);
+    letter-spacing: 0.30em;
+    line-height: 1;
+}
+
+.white {
+  color: #ffffff;
+}
+ 
+.instr-textbox {
+    position: absolute;
+    top: 9%;
+    left: 11.1%;
+    width: 55.5%;
+    height: 62%;
+    background: var(--grey);
+    padding: 32px 36px;
+}
+ 
+.instr-textbox p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: clamp(14px, 1.6vw, 22px);
+    color: var(--green);
+    line-height: 1.75;
+}
+ 
+.instr-character {
+    position: absolute;
+    top: 18%;
+    right: 8%;
+    width: clamp(100px, 14vw, 180px);
+}
+ 
+.tiny-person img{
+    top: 20%;
+    left: 100%;   
+    width: 20%;
+    height: auto;
+}
+ 
+.instr-arrow-char {
+    position: absolute;
+    top: 38%;
+    right: 22%;
+    font-size: clamp(40px, 5vw, 70px);
+    color: var(--green);
+    font-weight: 700;
+    line-height: 1;
+}
+ 
+.btn-next {
+    position: absolute;
+    bottom: 4%;
+    right: 3%;
+    width: clamp(70px, 8vw, 110px);
+    height: clamp(60px, 6vw, 90px);
+    background: var(--grey);
+    border: none;
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 700;
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.12s;
+}
+ 
+.btn-next:hover  { background: #b8b8b8; transform: scale(1.05); }
+.btn-next:active { transform: scale(0.97); }
