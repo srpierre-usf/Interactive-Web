@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,27 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="instructions.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
 </head>
 <body>
- 
+
     <h1 class="instr-title">INSTRUCTI<span class="white">ON</span>S</h1>
- 
-    <div class="instr-textbox">
-        <p>Lorem Ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-        ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-        ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-        lorem ipsum lorem ipsum lorem ipsum lorem ipsum.</p>
-    </div>
- 
+
+    <!-- p5.js draws the draggable grey text box onto this canvas -->
+    <div id="p5-canvas"></div>
 
     <div class="tiny-person">
         <img src="images/Interactive-Web_Tiny-Person_ENGLISH.png" alt="UK character" />
     </div>
- 
+
     <div class="instr-arrow-char">↗</div>
- 
-    <button class="btn-next" onclick="location.href='question1.html'">→</button>
- 
+
+    <button class="btn-next" onclick="location.href='question01.html'">→</button>
+
+    <script src="sketch.js"></script>
 </body>
 </html>

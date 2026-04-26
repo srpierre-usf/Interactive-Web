@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Say Hello! - Question 03</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="question.css">
+    <!-- Override background per question -->
+    <style>
+      body { background-image: url('images/Interactive-Web_Background13.jpg'); }
+    </style>
+    <script>window.NEXT_PAGE = 'completion.html';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+</head>
+<body>
+
+    <div class="q-header">
+        <h1 class="q-title"><span class="green">SAY</span> <span class="teal">HELLO!</span></h1>
+    </div>
+
+    <div class="answer-line-wrap">
+        <div class="answer-line-label">drag your answer here</div>
+        <div class="answer-line" id="answer-line"></div>
+    </div>
+
+    <div class="mascot">
+        <img id="mascot-img" src="" alt="character" />
+    </div>
+
+    <div id="p5-canvas"></div>
+
+    <button class="btn-next" id="btn-next" onclick="location.href='completion.html'">→</button>
+
+    <script src="question-sketch.js"></script>
+</body>
+</html>

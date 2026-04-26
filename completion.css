@@ -1,0 +1,109 @@
+/* ─────────────────────────────────────────────────────
+   completion.css
+   ───────────────────────────────────────────────────── */
+
+:root {
+    --green: #1d9e3e;
+    --teal:  #00a9ce;
+    --black: #1a1a1a;
+    --grey:  #d0d0d0;
+    --white: #ffffff;
+    --font:  'Space Grotesk', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    /* swap this for your completion background image */
+    background: url('images/Interactive-Web_Background12.jpg') center / 100% 100% no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── CHARACTERS ──────────────────────────────────────── */
+.char {
+    position: absolute;
+    width: clamp(80px, 10vw, 140px);
+    height: auto;
+    pointer-events: none;
+}
+
+.char-tl { top: 38%;  left: 8%;  }
+.char-tr { top: 35%;  right: 6%; }
+.char-bl { bottom: 8%; left: 2%;  }
+.char-br { bottom: 6%; right: 8%; }
+
+/* ── TEXT BLOCKS ─────────────────────────────────────── */
+.text-block {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 90%;
+}
+
+.text-block.top    { top: 2%; }
+.text-block.bottom { top: 52%; }
+
+/* ── LETTER LINES ────────────────────────────────────── */
+.big-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(4px, 1vw, 16px);
+    line-height: 1;
+}
+
+.letter {
+    font-family: var(--font);
+    font-weight: 900;
+    font-size: clamp(64px, 11vw, 148px);
+    letter-spacing: 0.04em;
+    line-height: 0.95;
+    display: inline-block;
+}
+
+.letter.white { color: var(--white); }
+.letter.green { color: var(--green); }
+
+/* ── PLAY AGAIN OVERLAY ──────────────────────────────── */
+/* Makes the entire bottom text clickable to play again */
+.play-again-overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* ── QUIT BUTTON ─────────────────────────────────────── */
+.btn-quit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width:  clamp(120px, 14vw, 190px);
+    height: clamp(70px,  8vh,  110px);
+    background: var(--grey);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: clamp(18px, 2.4vw, 32px);
+    letter-spacing: 0.18em;
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.12s;
+    z-index: 20;
+}
+
+.btn-quit:hover  { background: #b8b8b8; transform: scale(1.03); }
+.btn-quit:active { transform: scale(0.97); }
