@@ -67,12 +67,12 @@ body {
 
 .dropped-word {
     position: absolute;
-    top: -28px;
+    top: -95px;
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--font);
     font-weight: 700;
-    font-size: clamp(20px, 2.8vw, 36px);
+    font-size: clamp(100px, 4.5vw, 56px);
     letter-spacing: 0.1em;
     color: var(--teal);
     white-space: nowrap;
@@ -92,7 +92,6 @@ body {
     height: auto;
 }
 
-/* p5 CANVAS CONTAINER */
 #p5-canvas {
     position: absolute;
     bottom: 0;

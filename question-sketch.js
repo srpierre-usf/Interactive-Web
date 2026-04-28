@@ -1,11 +1,5 @@
-// HOW IT WORKS:
-// A random country is picked each page load from LANGUAGES.
-// The correct word + 5 distractors are scattered in the dashed box.
-// The player drags a word onto the grey line to answer.
-// Correct = green flash + next button activates.
-// Wrong   = red shake, word returns to box.
 
-// Language data
+// Language info
 const LANGUAGES = [
   { country: 'English',  word: 'Hello',   image: 'images/Interactive-Web_Tiny-Person_ENGLISH.png'  },
   { country: 'French',   word: 'Salut',   image: 'images/Interactive-Web_Tiny-Person_FRENCH.png'   },
@@ -34,15 +28,15 @@ function buildWords() {
     const j = Math.floor(Math.random() * (i + 1));
     [allWords[i], allWords[j]] = [allWords[j], allWords[i]];
   }
-  return allWords; // always contains the correct answer somewhere
+  return allWords; 
 }
 
 // State
 let words        = [];
-let dragging     = null;   // { index, offsetX, offsetY }
-let droppedIndex = -1;     // which word is on the line (-1 = none)
+let dragging     = null;  
+let droppedIndex = -1;    
 let answered     = false;
-let shakeWord    = -1;     // index of word currently shaking
+let shakeWord    = -1;     
 let shakeTimer   = 0;
 
 const LINE_ZONE = { x: 0, y: 0, w: 0, h: 0 }; // set in setup
@@ -60,13 +54,12 @@ function setup() {
 function buildWordObjects() {
   const raw = buildWords();
 
-  // Box occupies right ~55% of canvas, vertically centred
   const boxX = width * 0.32;
   const boxY = height * 0.08;
   const boxW = width * 0.40;
   const boxH = height * 0.75;
 
-  // Scatter words in a loose grid inside the box
+  // Word Bank Positions
   const cols = 2;
   const cellW = boxW / cols;
   const cellH = boxH / Math.ceil(raw.length / cols);
@@ -101,7 +94,7 @@ function updateLineZone() {
   LINE_ZONE.h = 60;
 }
 
-// Draw 
+
 function draw() {
   clear();
 
@@ -139,7 +132,6 @@ function draw() {
     fill(isDragging ? '#00a9ce' : '#1d9e3e');
 
     if (isDragging) {
-      // draw at mouse position
       text(w.text, mouseX + dragging.offsetX, mouseY + dragging.offsetY);
     } else {
       text(w.text, w.x + xOff, w.y);
@@ -147,7 +139,7 @@ function draw() {
   });
 }
 
-// ── Interaction ────────────────────────────────────────────────────
+// Click & Drag Interaction
 function mousePressed() {
   if (answered) return;
   updateLineZone();
@@ -222,10 +214,8 @@ function windowResized() {
   updateLineZone();
 }
 
-// ── Helpers ────────────────────────────────────────────────────────
 function setDroppedWordHTML(text) {
   const lineEl = document.getElementById('answer-line');
-  // remove old
   const old = lineEl.querySelector('.dropped-word');
   if (old) old.remove();
   if (!text) return;
@@ -247,7 +237,7 @@ function checkAnswer(text) {
       location.href = next;
     }, 1400);
   } else {
-    // Wrong — shake and return after delay
+    // Wrong!
     shakeWord  = droppedIndex;
     shakeTimer = 30;
     showFeedback(false);

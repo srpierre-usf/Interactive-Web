@@ -12,51 +12,56 @@
 </head>
 <body>
 
-    <!-- Full background image — swap filename to your completion bg -->
-    <!-- Characters placed at corners -->
     <img class="char char-tl" src="images/Interactive-Web_Tiny-Person_GERMAN.png"  alt="German character" />
     <img class="char char-tr" src="images/Interactive-Web_Tiny-Person_GREEK.png"   alt="Greek character" />
     <img class="char char-bl" src="images/Interactive-Web_Tiny-Person_TAGALOG.png" alt="Tagalog character" />
     <img class="char char-br" src="images/Interactive-Web_Tiny-Person_FRENCH.png"  alt="French character" />
 
-    <!-- GOOD JOB! — top half -->
-    <div class="text-block top">
-        <div class="big-line">
-            <span class="letter white">G</span>
-            <span class="letter white">O</span>
-            <span class="letter white">O</span>
-            <span class="letter white">D</span>
-        </div>
-        <div class="big-line">
-            <span class="letter white">J</span>
-            <span class="letter green">O</span>
-            <span class="letter white">B</span>
-            <span class="letter white">!</span>
+    <div class="completion-good">
+        <div class="completion-line">
+            <span class="completion-letter white">G</span>
+            <span class="completion-letter white">O</span>
+            <span class="completion-letter white">O</span>
+            <span class="completion-letter white">D</span>
         </div>
     </div>
 
-    <!-- PLAY AGAIN? — bottom half -->
-    <div class="text-block bottom">
-        <div class="big-line">
-            <span class="letter green">P</span>
-            <span class="letter white">L</span>
-            <span class="letter white">A</span>
-            <span class="letter green">Y</span>
-        </div>
-        <div class="big-line">
-            <span class="letter white">A</span>
-            <span class="letter white">G</span>
-            <span class="letter white">A</span>
-            <span class="letter green">I</span>
-            <span class="letter white">N</span>
-            <span class="letter white">?</span>
+    <div class="completion-job">
+        <div class="completion-line">
+            <span class="completion-letter white">J</span>
+            <span class="completion-letter green">O</span>
+            <span class="completion-letter white">B</span>
+            <span class="completion-letter white">!</span>
         </div>
     </div>
 
-    <!-- PLAY AGAIN clickable overlay (whole bottom half) -->
+    <div class="completion-play">
+        <div class="completion-line">
+            <span class="completion-letter green">P</span>
+            <span class="completion-letter white">L</span>
+            <span class="completion-letter white"> </span>
+            <span class="completion-letter white">A</span>
+            <span class="completion-letter green">Y</span>
+        </div>
+    </div>
+
+    <div class="completion-again">
+        <div class="completion-line">
+            <span class="completion-letter white">A</span>
+            <span class="completion-letter white">G</span>
+            <span class="completion-letter white">A</span>
+            <span class="completion-letter white"> </span>
+            <span class="completion-letter white"> </span>
+            <span class="completion-letter green">I</span>
+            <span class="completion-letter white"> </span>
+            <span class="completion-letter white">N</span>
+            <span class="completion-letter white">?</span>
+        </div>
+    </div>
+
+
     <a class="play-again-overlay" href="index.html"></a>
 
-    <!-- QUIT button bottom right -->
     <button class="btn-quit" onclick="location.href='index.html'">QUIT</button>
 
 </body>

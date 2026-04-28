@@ -1,14 +1,9 @@
-/* ─────────────────────────────────────────────────────
-   completion.css
-   ───────────────────────────────────────────────────── */
-
+/* COLOR */
 :root {
     --green: #1d9e3e;
     --teal:  #00a9ce;
-    --black: #1a1a1a;
     --grey:  #d0d0d0;
     --white: #ffffff;
-    --font:  'Space Grotesk', sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,87 +11,110 @@
 body {
     width: 100vw;
     height: 100vh;
-    /* swap this for your completion background image */
     background: url('images/Interactive-Web_Background12.jpg') center / 100% 100% no-repeat;
     position: relative;
     overflow: hidden;
 }
 
-/* ── CHARACTERS ──────────────────────────────────────── */
+/* CHARACTERS */
 .char {
     position: absolute;
-    width: clamp(80px, 10vw, 140px);
+    width: clamp(300px, 12vw, 180px);
     height: auto;
     pointer-events: none;
 }
 
-.char-tl { top: 38%;  left: 8%;  }
-.char-tr { top: 35%;  right: 6%; }
-.char-bl { bottom: 8%; left: 2%;  }
-.char-br { bottom: 6%; right: 8%; }
+.char-tl { top: 22%;  left: 10.2%; }
+.char-tr { top: 22%;  right: 10%; }
+.char-bl { bottom: 15%; left: -0.5%;  }
+.char-br { bottom: 15.5%; right: -0.5%; }
 
-/* ── TEXT BLOCKS ─────────────────────────────────────── */
-.text-block {
+/* GOOD */
+.completion-good {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 11%;
+    top: -2%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 0;
-    width: 90%;
 }
 
-.text-block.top    { top: 2%; }
-.text-block.bottom { top: 52%; }
-
-/* ── LETTER LINES ────────────────────────────────────── */
-.big-line {
+/* JOB */
+.completion-job {
+    position: absolute;
+    left: 23.5%;
+    top: 14.5%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* PLAY */
+.completion-play {
+    position: absolute;
+    left: 14%;
+    top: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* AGAIN */
+.completion-again {
+    position: absolute;
+    left: 13%;
+    top: 64.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* SHARED LETTER STYLE */
+.completion-line {
+    display: flex;
+    align-items: left;
+    justify-content: left;
     gap: clamp(4px, 1vw, 16px);
     line-height: 1;
 }
 
-.letter {
-    font-family: var(--font);
+.completion-letter {
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 900;
-    font-size: clamp(64px, 11vw, 148px);
-    letter-spacing: 0.04em;
-    line-height: 0.95;
+    font-size: clamp(295px, 10vw, 130px);
+    letter-spacing: 0.25em;
+    line-height: 1;
     display: inline-block;
 }
 
-.letter.white { color: var(--white); }
-.letter.green { color: var(--green); }
+.white { color: var(--white); }
+.green { color: var(--green); }
 
-/* ── PLAY AGAIN OVERLAY ──────────────────────────────── */
-/* Makes the entire bottom text clickable to play again */
+/* PLAY AGAIN OVERLAY */
 .play-again-overlay {
     position: absolute;
     top: 50%;
     left: 0;
-    width: 100%;
+    width: 72%;
     height: 50%;
     cursor: pointer;
     z-index: 10;
 }
 
-/* ── QUIT BUTTON ─────────────────────────────────────── */
+/* QUIT BUTTON */
 .btn-quit {
     position: absolute;
     bottom: 0;
-    right: 0;
-    width:  clamp(120px, 14vw, 190px);
-    height: clamp(70px,  8vh,  110px);
+    right: 0.5%;
+    width:  clamp(521.1px, 14vw, 190px);
+    height: clamp(232.1px,  8vh,  110px);
     background: var(--grey);
     border: none;
     cursor: pointer;
-    font-family: var(--font);
+    font-family: 'Space Grotesk';
     font-weight: 700;
-    font-size: clamp(18px, 2.4vw, 32px);
-    letter-spacing: 0.18em;
+    font-size: clamp(100px, 2.4vw, 32px);
+    letter-spacing: 0.15em;
     color: var(--teal);
     display: flex;
     align-items: center;

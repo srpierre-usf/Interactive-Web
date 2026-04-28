@@ -16,7 +16,6 @@ body {
     overflow: hidden;
 }
 
-/* p5 CANVAS CONTAINER */
 #p5-canvas {
     position: absolute;
     top: 0; left: 0;

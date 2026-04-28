@@ -1,7 +1,7 @@
 const instructionText =
   "Each round you will see a character holding their country flag. " +
   "Drag the correct word from the box below onto the line to say " +
-  "hello in their language. Three rounds, three languages — good luck!" +
+  "hello in their language. Three rounds, three languages. Good luck!" +
   "\n" +
   "\n" +
   " Click & Drag this text box to practice.";
