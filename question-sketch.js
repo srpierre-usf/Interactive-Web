@@ -9,8 +9,7 @@ const LANGUAGES = [
   { country: 'Tagalog',  word: 'Hoy',     image: 'images/Interactive-Web_Tiny-Person_TAGALOG.png'  },
 ];
 
-// Pick a random language each load
-// (avoids repeating the same one as previous page if stored)
+//Random language
 const prevCountry = sessionStorage.getItem('lastCountry') || '';
 let pool = LANGUAGES.filter(l => l.country !== prevCountry);
 const chosen = pool[Math.floor(Math.random() * pool.length)];
@@ -20,7 +19,7 @@ sessionStorage.setItem('lastCountry', chosen.country);
 document.getElementById('mascot-img').src = chosen.image;
 document.getElementById('mascot-img').alt  = chosen.country + ' character';
 
-// Build word list: correct + all others shuffled
+// Build word list
 function buildWords() {
   const allWords = LANGUAGES.map(l => l.word);
   // shuffle
@@ -127,7 +126,7 @@ function draw() {
       if (shakeTimer <= 0) shakeWord = -1;
     }
 
-    // highlight word being dragged
+    // Highlight if dragging
     const isDragging = dragging && dragging.index === i;
     fill(isDragging ? '#00a9ce' : '#1d9e3e');
 
@@ -154,7 +153,7 @@ function mousePressed() {
       mouseX > w.x - tw / 2 - 8 && mouseX < w.x + tw / 2 + 8 &&
       mouseY > w.y - th        && mouseY < w.y + 6
     ) {
-      // if another word is on the line, return it home first
+      // Return word to bank
       if (droppedIndex !== -1) {
         words[droppedIndex].onLine = false;
         words[droppedIndex].x = words[droppedIndex].homeX;
